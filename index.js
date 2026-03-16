@@ -11,3 +11,17 @@ list.insertAdjacentHTML('afterend', '<p>This is afterend method</p>');
 
 let nav = document.querySelector("#container");
 nav.removeChild(nav.lastElementChild);
+
+
+//Dom method ---> 'prepend()'...
+let app = document.getElementById('cont');
+let arr = ['HTML', 'CSS', 'REACT'];
+let myFunction = (lang => {
+    let li = document.createElement('li');
+    li.textContent = lang;
+    return li;
+});
+arr.forEach(lang=>{
+    app.prepend(myFunction(lang));
+})
+
