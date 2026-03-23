@@ -1,84 +1,37 @@
-//JS Function Tutorial...
-//using normal function...
-function findVowel(str) {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i].toLowerCase();
-        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
-            count++;
-        }
-    }
-    return count;
-}
-//using arrow function...
-const searchVowel = (str) => {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i].toLowerCase();
-        if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
-            count++;
-        }
-    }
-    return count;
-}
-//For each loop. it act's like a method...
-let arr = [1,2,3,4,5];
-arr.forEach(function printValue(val){
-    console.log(val);
-})
-//For a given array of numbers, print the squeare of each value using foreach loop
-let arr = [2,3,6,8,10];
-arr.forEach((arr)=>{
-    console.log(arr);
-})
-arr.forEach((arr)=>{
-    console.log(arr**2);
-});
-
-//Function tutorial end...
-
-//Js inserAdjacentHTML() methods...
-// It has four values which is--> 'Beforebeing', 'afterbeing', 'beforend', 'afterend'....
-
-let list = document.querySelector("#container");
-list.insertAdjacentHTML('beforebegin', '<h2>This is beforebeing method</h2>');
-list.insertAdjacentHTML('afterbegin', '<li>This is after being method</li>');
-list.insertAdjacentHTML('beforeend', '<li>This is beforend method</li>');
-list.insertAdjacentHTML('afterend', '<p>This is afterend method</p>');
-
-//Js removechild() method...
-
-let nav = document.querySelector("#container");
-nav.removeChild(nav.lastElementChild);
+let parent = document.querySelector('#parent');
+let form = document.querySelector('#form');
+let button = document.querySelector('#btn');
 
 
-//Dom method ---> 'prepend()'...
-let app = document.getElementById('cont');
-let arr = ['HTML', 'CSS', 'REACT'];
-let myFunction = (lang => {
-    let li = document.createElement('li');
-    li.textContent = lang;
-    return li;
-});
-arr.forEach(lang=>{
-    app.prepend(myFunction(lang));
-});
+/// at first remove the comment...
+// button.addEventListener('click', listen);
+// form.addEventListener('click', listen);
+// parent.addEventListener('click', listen);
 
+//Js Bubbling...
+//Here atfirst come child element then parent element..
+// function listen (enent) {
+//     console.log(event.currentTarget);
+//}
 
+// function listen (event){
+//     console.log(this.tagName);
+// }
 
-//getComputedStyle method...
-let mess = document.getElementById('message');
-let style = getComputedStyle(mess);
+//Js Capturing...
+//It just reverse the tag name. parent parent come first then child...
 
-console.log('Color: ', style.color);
-console.log('background color: ', style.backgroundColor);
+// button.addEventListener('click', listen, {
+//     capture: true,
+// });
+// form.addEventListener('click', listen, {
+//     capture: true,
+// });
+// parent.addEventListener('click', listen, {
+//     capture: true,
+// });
 
-//className method. it use to identefy the class name in innerHtml...
-let idName = document.querySelector('.message');
-console.log("Class name is : ", idName.className);
+// function listen (){
+//     console.log(this.tagName);
+// }
 
-//classList..
-let div = document.querySelector('#content');
-for (let cssClass of div.classList) {
-    console.log(cssClass);
-}
