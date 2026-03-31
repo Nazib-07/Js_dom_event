@@ -57,3 +57,39 @@ bgColor.addEventListener('mousemove', (e)=>{
     let messa = document.querySelector('#messa');
     messa.innerHTML = `Client is ${e.clientX}, ${e.clientY}`;
 })
+
+//Js Encapsulation...
+
+class Person{
+    constructor (naam){
+        this.naam = naam;
+    }
+    getNaam(){
+        return this.naam;
+    }
+}
+
+let newPeson = new Person('Nazib');
+console.log(newPeson.getNaam());
+
+class std{
+    constructor (name){
+        this.name = name;
+    }
+    getName(){
+        return this.name;
+    }
+    setName(newName){
+        newName = newName.trim();//Here use trim() because it removes the free space in any kind of string.
+        if(newName===""){
+            throw 'This name cannot be empty';
+        }
+        this.name = newName;
+    }
+}
+let newStd = new std('Nazib');
+console.log(newStd.getName());
+
+newStd.setName('Nazib ul Alam');
+console.log(newStd.getName());
+
