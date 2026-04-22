@@ -116,7 +116,7 @@ for(let i = 0; i<2; i++){
     table.appendChild(row);
 }
 document.body.appendChild(table);
-///Second Type problem..
+///Second Type problem-1....
 const table = document.createElement('table');
 table.style.borderCollapse = 'collapse';
 
@@ -145,3 +145,37 @@ for (let k = 0; k < 2; k++) {
 
 document.body.appendChild(table);
 
+//problem-2...
+const boxDiv = document.getElementsByClassName('feature-box');
+for(let i=0; i<4; i++){
+    boxDiv[i].style.border = '1px dashed black';
+    boxDiv[i].style.padding = '10px';
+}
+boxDiv[1].style.backgroundColor = 'orange';
+
+//problem-3...
+const myFunction = ()=>{
+    const div = document.getElementById('div');
+    const h3Element = document.createElement('h3');
+    h3Element.textContent = 'This is a new h3 element';
+    div.appendChild(h3Element);
+}
+
+//problem-4...
+const countTages = ()=>{
+    const pTag = document.getElementsByClassName('pTag');
+    const divTag = document.getElementsByClassName('divTag');
+    const result = pTag.length;
+    const ans = divTag.length
+    const h3Item = document.getElementById('h3');
+    h3Item.innerHTML = `p tag are present: ${result} and Div tag are: ${ans}`;
+}
+
+//problem-5..
+const findAnswer = ()=>{
+    const a = 5, b=10, c=3;
+    const result = (a+b)*c;
+
+    const display = document.getElementById('res');
+    display.innerHTML = `The result is ${result}`;
+}
