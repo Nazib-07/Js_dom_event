@@ -93,3 +93,8 @@ console.log(newStd.getName());
 newStd.setName('Nazib ul Alam');
 console.log(newStd.getName());
 
+let taskParent = document.getElementById('items');
+let taskChild = taskParent.getElementsByClassName('item');
+for(let i=0; i<taskChild.length; i++){
+    taskChild[i].style.color = 'red';
+}
