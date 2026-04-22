@@ -98,3 +98,22 @@ let taskChild = taskParent.getElementsByClassName('item');
 for(let i=0; i<taskChild.length; i++){
     taskChild[i].style.color = 'red';
 }
+
+//using DOM to create a table..
+const table = document.createElement('table');
+table.style.border = '2px solid black';
+
+for(let i = 0; i<2; i++){
+    const row = document.createElement('tr');
+
+    for(let j = 0; j<2; j++){
+        const col = document.createElement('td');
+        col.textContent = '1st cell';
+        col.style.border = '1px solid red';
+        col.style.padding = '10px';
+        row.appendChild(col);
+    }
+    table.appendChild(row);
+}
+document.body.appendChild(table);
+
